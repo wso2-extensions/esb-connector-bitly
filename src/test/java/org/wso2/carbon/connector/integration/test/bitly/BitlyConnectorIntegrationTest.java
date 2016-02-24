@@ -48,6 +48,7 @@ public class BitlyConnectorIntegrationTest extends ConnectorIntegrationTestBase 
 
         apiRequestHeadersMap.putAll(esbRequestHeadersMap);
     }
+
     /**
      * Positive test case for getUOauthApp method with mandatory parameters
      */
