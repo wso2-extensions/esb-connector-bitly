@@ -9,14 +9,14 @@ Pre-requisites:
 
  Tested Platform: 
 
-  - UBUNTU 12.04
-  - WSO2 ESB 4.8.1
+  - UBUNTU 12.04, 14.04
+  - WSO2 ESB 4.8.1, 5.0.0-BETA
 
  STEPS:
  
  1. To build the connector without running tests from any location, run maven build with the -Dmaven.test.skip=true switch.
 
- 2. Compress modified ESB as wso2esb-4.8.0.zip and copy that zip file in to location "<esb-connector-bitly>/repository/", If applicable put the all patches.
+ 2. Compress modified ESB as wso2esb-5.0.0-BETA.zip, add "-XX:-UseSplitVerifier" under $JVM_MEM_OPTS into {ESB_HOME}/bin/wso2server.sh" and copy that zip file in to location "<esb-connector-bitly>/repository/".
 
  3. import the certificate to the esb client keystore as follows,
 
@@ -38,7 +38,7 @@ Pre-requisites:
 
  5. Update the bitly.properties file with your details if you have any or you can use the default account details as it is.
 
-    	accessTokenNegative=32bf9d3a30158969a76a3484916c017af98099ed
+    accessTokenNegative=32bf9d3a30158969a76a3484916c017af98099ed
 	clientId=136dd4d95433bdc36f32493a2db66683df5574a2
 	clientSecret=becfde302002ad94d50f9c51c7e905e991fba069
 
@@ -51,4 +51,3 @@ Pre-requisites:
  	Password : wso2carbon
 	email 	 : bitlywso2test@gmail.com
 
-	Resource Bundle is currently unavailable..

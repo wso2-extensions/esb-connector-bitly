@@ -1,7 +1,0 @@
-{
-
-       "accessToken":"%s(accessToken)",
-       "bitlyUser":"%s(bitlyUser)",
-       "expandUser":"%s(expandUser)"
-
-}
