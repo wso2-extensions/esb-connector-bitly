@@ -1,7 +1,0 @@
-{
-
-       "accessToken":"%s(accessTokenNegative)",
-       "newBundleTitle":"%s(newBundleTitle)",
-       "toBundleLink":"%s(toBundleLink)"
-
-}

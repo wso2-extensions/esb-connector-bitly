@@ -26,15 +26,11 @@
         <inSequence>
             <property name="accessToken" expression="json-eval($.accessToken)"/>
             <property name="fullName" expression="json-eval($.fullName)"/>
-            <property name="toBundleLink" expression="json-eval($.toBundleLink)"/>
-            <property name="addBitlyLink" expression="json-eval($.addBitlyLink)"/>
             <property name="crtBundleTitle" expression="json-eval($.crtBundleTitle)"/>
-            <property name="newBundleTitle" expression="json-eval($.newBundleTitle)"/>
             <property name="bitlyUser" expression="json-eval($.bitlyUser)"/>
             <property name="proDomain" expression="json-eval($.proDomain)"/>
             <property name="expandUser" expression="json-eval($.expandUser)"/>
             <property name="bndlDescription" expression="json-eval($.bndlDescription)"/>
-            <property name="private" expression="json-eval($.private)"/>
             <property name="limit" expression="json-eval($.limit)"/>
             <property name="isExpandClientId" expression="json-eval($.isExpandClientId)"/>
             <property name="NoOfLinks" expression="json-eval($.NoOfLinks)"/>
@@ -59,7 +55,6 @@
             <property name="privateLink" expression="json-eval($.privateLink)"/>
             <property name="bitlyShortDomain" expression="json-eval($.bitlyShortDomain)"/>
             <property name="clientId" expression="json-eval($.clientId)"/>
-            <property name="deleteBundleLink" expression="json-eval($.deleteBundleLink)"/>
             <bitly.init>
                 <accessToken>{$ctx:accessToken}</accessToken>
             </bitly.init>
@@ -204,62 +199,6 @@
                     <bitly.getLinkReferringDomains>
                         <urlforReferringDomain>{$ctx:urlforReferringDomain}</urlforReferringDomain>
                     </bitly.getLinkReferringDomains>
-                </case>
-                <!--bundle-->
-                <case regex="urn:getBundlesByUser">
-                    <bitly.getBundlesByUser>
-                        <bitlyUserName>{$ctx:bitlyUser}</bitlyUserName>
-                        <expandUser>{$ctx:expandUser}</expandUser>
-                    </bitly.getBundlesByUser>
-                </case>
-                <case regex="urn:getBundleContents">
-                    <bitly.getBundleContents>
-                        <bundleLink>{$ctx:toBundleLink}</bundleLink>
-                        <expand_user>{$ctx:expandUser}</expand_user>
-                    </bitly.getBundleContents>
-                </case>
-                <case regex="urn:createBundle">
-                    <bitly.createBundle>
-                        <Bundle_title>{$ctx:crtBundleTitle}</Bundle_title>
-                        <Bundle_description>{$ctx:bndlDescription}</Bundle_description>
-                        <Bundle_private>{$ctx:private}</Bundle_private>
-                    </bitly.createBundle>
-                </case>
-                <case regex="urn:deleteBundle">
-                    <bitly.createBundle>
-                        <deleteBundleLink>{$ctx:deleteBundleLink}</deleteBundleLink>
-                    </bitly.createBundle>
-                </case>
-                <case regex="urn:editBundle">
-                    <bitly.editBundle>
-                        <editBundleLink>{$ctx:toBundleLink}</editBundleLink>
-                        <newBundleTitle>{$ctx:newBundleTitle}</newBundleTitle>
-                        <editDescription>{$ctx:bndlDescription}</editDescription>
-                        <private>{$ctx:private}</private>
-                    </bitly.editBundle>
-                </case>
-                <case regex="urn:getBundlEviewCount">
-                    <bitly.getBundlEviewCount>
-                        <bundleLinkforView>{$ctx:toBundleLink}</bundleLinkforView>
-                    </bitly.getBundlEviewCount>
-                </case>
-                <case regex="urn:getBundleLinkRemove">
-                    <bitly.getBundleLinkRemove>
-                        <fromBundleLink>{$ctx:toBundleLink}</fromBundleLink>
-                        <removeBitlyLink>{$ctx:addBitlyLink}</removeBitlyLink>
-                    </bitly.getBundleLinkRemove>
-                </case>
-                <case regex="urn:getUserBundleHistory">
-                    <bitly.getUserBundleHistory>
-                        <expandUserBundle>{$ctx:expandUser}</expandUserBundle>
-                    </bitly.getUserBundleHistory>
-                </case>
-                <case regex="urn:addLinkToBundle">
-                    <bitly.addLinkToBundle>
-                        <toBundleLink>{$ctx:toBundleLink}</toBundleLink>
-                        <addBitlyLink>{$ctx:addBitlyLink}</addBitlyLink>
-                        <bundleTitle>{$ctx:bundleTitle}</bundleTitle>
-                    </bitly.addLinkToBundle>
                 </case>
                 <!--domain-->
                 <case regex="urn:getProDomain">

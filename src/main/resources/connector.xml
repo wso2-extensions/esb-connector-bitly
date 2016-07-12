@@ -23,7 +23,6 @@
         <dependency component="bitly_links"/>
         <dependency component="bitly_link_metrics"/>
         <dependency component="bitly_user"/>
-        <dependency component="bitly_bundle"/>
         <dependency component="bitly_user_metrics"/>
         <dependency component="bitly_domain"/>
         <description>Bitly v3 cloud connector</description>
