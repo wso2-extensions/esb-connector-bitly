@@ -4,7 +4,7 @@
     "category": "Other",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/Bitly+Connector",
     "description": "The Bitly connector allows you to access the Bitly Rest API through the WSO2 ESB. Bitly allows you to integrate your websites and applications with the Bitly service.",
-    "status": "Active",
+    "status": "Inactive",
     "labels": [
         "connector"
     ],
